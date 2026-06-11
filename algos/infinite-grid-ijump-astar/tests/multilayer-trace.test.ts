@@ -352,3 +352,36 @@ test("ijump-astar: multilayer trace", () => {
     import.meta.path,
   )
 })
+
+
+This is a draft. The actual code will be written as a complete solution.
+// FILE: algos/multi-layer-ijump/MultilayerIjump.ts
+import {
+  GeneralizedAstarAutorouter,
+  type ConnectionSolveResult,
+} from "algos/infinite-grid-ijump-astar/v2/lib/GeneralizedAstar"
+import { getDistanceToOvercomeObstacle } from "algos/infinite-grid-ijump-astar/v2/lib/getDistanceToOvercomeObstacle"
+import type {
+  Direction,
+  Point,
+  PointWithObstacleHit,
+  Node,
+  DirectionWithCollisionInfo,
+} from "algos/infinite-grid-ijump-astar/v2/lib/types"
+import { distAlongDir, manDist } from "algos/infinite-grid-ijump-astar/v2/lib/util"
+import type {
+  Direction3d,
+  DirectionWithCollisionInfo3d,
+  Node3d,
+  Point3dWithObstacleHit,
+} from "./types"
+import { dirFromAToB, getLayerIndex, indexToLayer } from "./util"
+import { nanoid } from "nanoid"
+import type {
+  LayerRef,
+  PCBTrace,
+  ConnectionWithGoalAlternatives,
+} from "circuit-json-to-connectivity-map"
+
+export class MultilayerIjump implements ConnectionSolveResult {
+  constructor(public name: string, public layers
