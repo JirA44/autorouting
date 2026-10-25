@@ -1,3 +1,13 @@
+## Français
+
+Algorithmes et jeux de données pour développer et comparer des routeurs automatiques de circuits. Exemple : explorer les problèmes de routage et utiliser les benchmarks pour comparer des approches.
+
+## English
+
+Algorithms and datasets for developing and benchmarking autorouters. Example: explore routing problems and use the benchmarks to compare approaches.
+
+---
+
 # tscircuit autorouting
 
 [view online](https://dataset.autorouting.com) &middot; [blog](https://blog.autorouting.com) &middot; [discord](https://tscircuit.com/community/join-redirect) &middot; [tscircuit](https://github.com/tscircuit/tscircuit) &middot; [benchmarks](./BENCHMARKS.md)
